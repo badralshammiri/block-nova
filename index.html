@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bader Al-Shammari | Block Nova Official</title>
     
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/badralshammari/block-nova/main/bnova-icon.png">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -13,73 +13,73 @@
     <style>
         :root {
             --primary: #00d2ff; --secondary: #3a7bd5; --dark: #050505;
-            --glass: rgba(255, 255, 255, 0.03); --glass-hover: rgba(255, 255, 255, 0.08);
-            --border: rgba(255, 255, 255, 0.06);
+            --silver-grad: linear-gradient(145deg, #bdc3c7, #2c3e50);
+            --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.06);
         }
         * { box-sizing: border-box; transition: all 0.3s ease; }
         body {
-            font-family: 'Tajawal', 'Inter', sans-serif;
-            background: radial-gradient(circle at top right, #1a253a, #050505);
+            font-family: 'Tajawal', sans-serif;
+            background: radial-gradient(circle at top right, #1a253a, #020202);
             color: #fff; margin: 0; min-height: 100vh;
             display: flex; justify-content: center; align-items: center; padding: 20px;
         }
         .container {
-            background: var(--glass); backdrop-filter: blur(20px);
-            border: 1px solid var(--border); border-radius: 30px;
-            padding: 45px; max-width: 550px; width: 100%;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.8); position: relative; overflow: hidden;
+            background: var(--glass); backdrop-filter: blur(25px);
+            border: 1px solid var(--border); border-radius: 40px;
+            padding: 50px 40px; max-width: 550px; width: 100%;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.9); text-align: center; position: relative;
         }
-        
-        /* 2. تصميم منطقة اللوقو الجديد */
-        .header { text-align: center; margin-bottom: 35px; position: relative; z-index: 2; }
-        .game-logo {
-            width: 120px; height: 120px;
-            margin: 0 auto 15px;
-            display: block;
-            border-radius: 25px;
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
-            border: 2px solid rgba(255,255,255,0.1);
-        }
-        
         .lang-switch {
-            position: absolute; top: 20px; left: 20px;
-            background: var(--primary); color: #000; border: none;
-            padding: 8px 15px; border-radius: 50px; cursor: pointer;
+            position: absolute; top: 25px; left: 25px;
+            background: #fff; color: #000; border: none;
+            padding: 8px 16px; border-radius: 50px; cursor: pointer;
             font-weight: bold; font-size: 12px; z-index: 10;
         }
-        h1 { font-size: 2.2rem; margin: 0; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { background: rgba(0, 210, 255, 0.1); color: var(--primary); padding: 5px 15px; border-radius: 50px; font-size: 13px; border: 1px solid var(--primary); margin-top: 10px; display: inline-block; }
         
-        .section-title { text-align: right; font-size: 18px; margin: 25px 0 15px; color: var(--primary); border-right: 3px solid var(--primary); padding-right: 10px; }
-        .en .section-title { text-align: left; border-right: none; border-left: 3px solid var(--primary); padding-right: 0; padding-left: 10px; }
-
-        .btn-list { display: flex; flex-direction: column; gap: 12px; }
-        .btn {
-            display: flex; align-items: center; padding: 18px 25px; border-radius: 18px;
-            text-decoration: none; color: #fff; background: rgba(255,255,255,0.01);
-            border: 1px solid var(--border); font-size: 16px; position: relative;
+        /* تصميم إطار اللوقو السلفر */
+        .logo-wrapper {
+            width: 140px; height: 140px;
+            margin: 0 auto 25px;
+            background: linear-gradient(145deg, #e6e7e8, #999ea2);
+            padding: 4px; border-radius: 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 15px rgba(255,255,255,0.5);
+            display: flex; align-items: center; justify-content: center;
         }
-        .btn:hover { background: var(--glass-hover); border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .btn i { font-size: 22px; margin-left: 15px; width: 25px; text-align: center; }
+        .game-logo {
+            width: 100%; height: 100%;
+            border-radius: 31px;
+            object-fit: cover;
+        }
+
+        h1 { font-size: 2.4rem; margin: 0; background: linear-gradient(to bottom, #fff, #a1a1a1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { background: rgba(0, 210, 255, 0.1); color: var(--primary); padding: 6px 18px; border-radius: 50px; font-size: 13px; border: 1px solid var(--primary); margin: 15px 0; display: inline-block; }
+        
+        .section-title { text-align: right; font-size: 18px; margin: 30px 0 15px; color: #fff; border-right: 4px solid var(--primary); padding-right: 12px; font-weight: bold; }
+        .en .section-title { text-align: left; border-right: none; border-left: 4px solid var(--primary); padding-left: 12px; }
+
+        .btn-list { display: flex; flex-direction: column; gap: 14px; }
+        .btn {
+            display: flex; align-items: center; padding: 20px 25px; border-radius: 20px;
+            text-decoration: none; color: #fff; background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border); font-size: 16px;
+        }
+        .btn:hover { background: rgba(255,255,255,0.08); border-color: #fff; transform: translateY(-4px); }
+        .btn i { font-size: 22px; margin-left: 15px; width: 30px; text-align: center; }
         .en .btn i { margin-left: 0; margin-right: 15px; }
         
-        /* تلوين أيقونات الدعم */
+        .fa-x-twitter { color: #fff; font-size: 24px !important; }
         .fa-whatsapp { color: #25D366; }
-        .fa-x-twitter { color: #fff; } /* لون أبيض لأيقونة X الجديدة */
         .fa-envelope { color: #ea4335; }
 
-        .security-card {
-            background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2);
-            border-radius: 15px; padding: 15px; margin-top: 25px; font-size: 14px; color: #a7f3d0;
+        .security-note {
+            background: rgba(0, 210, 255, 0.05); border: 1px solid rgba(0, 210, 255, 0.1);
+            border-radius: 20px; padding: 20px; margin-top: 30px; text-align: right;
         }
-        .security-card i { color: #22c55e; margin-left: 8px; }
-        .en .security-card i { margin-left: 0; margin-right: 8px; }
+        .en .security-note { text-align: left; }
+        .security-note b { color: var(--primary); display: block; margin-bottom: 5px; font-size: 16px; }
 
-        .hidden { display: none; }
-        .en .ar-text { display: none; }
-        .en .en-text { display: block; }
-        .ar-text { display: block; }
-        .en-text { display: none; }
+        .ar-text { display: block; } .en-text { display: none; }
+        .en .ar-text { display: none; } .en .en-text { display: block; }
     </style>
 </head>
 <body>
@@ -88,59 +88,53 @@
         <button class="lang-switch" onclick="toggleLang()">English</button>
 
         <div class="header">
-            <img src="https://raw.githubusercontent.com/badralshammari/block-nova/main/bnova-icon.png" alt="Block Nova Logo" class="game-logo">
+            <div class="logo-wrapper">
+                <img src="logo.jpg" alt="Block Nova" class="game-logo" onerror="this.src='https://via.placeholder.com/150/999ea2/ffffff?text=B+Nova'">
+            </div>
             
             <h1 class="ar-text">بلوك نوفا</h1>
             <h1 class="en-text">Block Nova</h1>
             <div class="badge ar-text">مطور معتمد من آبل</div>
             <div class="badge en-text">Apple Verified Developer</div>
-            <p class="ar-text" style="color:#94a3b8">بإشراف المطور: <b>بدر محمد الشمري</b></p>
-            <p class="en-text" style="color:#94a3b8">Developer: <b>Bader Al-Shammari</b></p>
+            <p style="color:#94a3b8; margin: 5px 0;">Developer: <b>Bader Al-Shammari</b></p>
         </div>
 
         <div class="section-title">
-            <span class="ar-text">قنوات الدعم الرسمي</span>
-            <span class="en-text">Official Support Channels</span>
+            <span class="ar-text">الدعم والاتصال</span>
+            <span class="en-text">Support & Contact</span>
         </div>
 
         <div class="btn-list">
             <a href="https://wa.me/96551131102" class="btn">
                 <i class="fab fa-whatsapp"></i>
-                <span class="ar-text">واتساب الدعم السريع</span>
+                <span class="ar-text">واتساب الدعم المباشر</span>
                 <span class="en-text">Direct WhatsApp Support</span>
             </a>
             <a href="https://x.com/iB4DR_I" class="btn">
                 <i class="fab fa-x-twitter"></i>
-                <span class="ar-text">المطور على منصة X</span>
-                <span class="en-text">Developer on X Platform</span>
+                <span class="ar-text">متابعة المطور على X</span>
+                <span class="en-text">Follow Developer on X</span>
             </a>
             <a href="mailto:IB4DRI@GMAIL.COM" class="btn">
                 <i class="fas fa-envelope"></i>
-                <span class="ar-text">البريد الإلكتروني الرسمي</span>
-                <span class="en-text">Official Support Email</span>
+                <span class="ar-text">المراسلة الرسمية</span>
+                <span class="en-text">Official Email Support</span>
             </a>
         </div>
 
-        <div class="security-card">
-            <div class="ar-text">
-                <i class="fas fa-shield-halved"></i>
-                <b>بيئة آمنة:</b> نستخدم أحدث معايير الأمان لحماية بيانات المستخدمين وتوفير تجربة لعب خالية من المخاطر.
-            </div>
-            <div class="en-text">
-                <i class="fas fa-shield-halved"></i>
-                <b>Safe Environment:</b> We use the latest security standards to protect user data and ensure a risk-free gaming experience.
-            </div>
+        <div class="security-note">
+            <span class="ar-text">
+                <b><i class="fas fa-user-shield"></i> الأمان والخصوصية</b>
+                نحن نلتزم بأعلى معايير التشفير وحماية البيانات. Block Nova لا تقوم بجمع معلوماتك الشخصية، وتوفر بيئة لعب مستقرة وآمنة تماماً لجميع المستخدمين.
+            </span>
+            <span class="en-text">
+                <b><i class="fas fa-user-shield"></i> Security & Privacy</b>
+                We adhere to the highest standards of encryption. Block Nova does not collect personal info, providing a stable and secure environment for all users.
+            </span>
         </div>
 
-        <div class="privacy-section" style="margin-top:25px; font-size:13px; color:#64748b; text-align:justify;">
-            <strong style="color:#fff;" class="ar-text">سياسة الخصوصية والاحترافية:</strong>
-            <strong style="color:#fff;" class="en-text">Privacy & Professionalism:</strong>
-            <p class="ar-text">تم بناء Block Nova وفقًا لمعايير Apple الصارمة. نحن نحترم الخصوصية ولا نقوم بجمع بيانات شخصية دون إذن صريح عبر نظام ATT.</p>
-            <p class="en-text">Block Nova is built according to Apple's strict standards. We respect privacy and do not collect personal data without explicit permission via the ATT system.</p>
-        </div>
-
-        <footer style="text-align:center; margin-top:30px; font-size:11px; color:#475569;">
-            &copy; 2026 Bader Al-Shammari. Professional App Development.
+        <footer style="margin-top:40px; font-size:11px; color:#475569; letter-spacing: 1px;">
+            &copy; 2026 BADER AL-SHAMMARI. PREMIUM SOLUTIONS.
         </footer>
     </div>
 
