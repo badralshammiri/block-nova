@@ -3,153 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bader Al-Shammari | Block Nova Official</title>
+    <title>Bader Al-Shammari | Block Nova Professional Hub</title>
     
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="icon" type="image/png" href="https://image2url.com/r2/default/images/1775012683058-e66122bd-158c-4ec8-a35b-42f4a54b37d0.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #00d2ff; --secondary: #3a7bd5; --dark: #050505;
-            --silver-grad: linear-gradient(145deg, #bdc3c7, #2c3e50);
-            --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.06);
+            --primary: #00d2ff; --secondary: #3a7bd5; --dark: #020202;
+            --silver-glow: rgba(192, 192, 192, 0.4);
+            --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.08);
         }
-        * { box-sizing: border-box; transition: all 0.3s ease; }
+        * { box-sizing: border-box; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        
         body {
             font-family: 'Tajawal', sans-serif;
-            background: radial-gradient(circle at top right, #1a253a, #020202);
+            background: radial-gradient(circle at center, #111d33 0%, #020202 100%);
             color: #fff; margin: 0; min-height: 100vh;
-            display: flex; justify-content: center; align-items: center; padding: 20px;
+            display: flex; justify-content: center; align-items: center; padding: 25px;
+            overflow-x: hidden;
         }
+
         .container {
-            background: var(--glass); backdrop-filter: blur(25px);
-            border: 1px solid var(--border); border-radius: 40px;
-            padding: 50px 40px; max-width: 550px; width: 100%;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.9); text-align: center; position: relative;
+            background: var(--glass); backdrop-filter: blur(30px);
+            border: 1px solid var(--border); border-radius: 45px;
+            padding: 55px 45px; max-width: 600px; width: 100%;
+            box-shadow: 0 50px 120px rgba(0,0,0,0.9); text-align: center; position: relative;
         }
+
         .lang-switch {
-            position: absolute; top: 25px; left: 25px;
+            position: absolute; top: 30px; left: 30px;
             background: #fff; color: #000; border: none;
-            padding: 8px 16px; border-radius: 50px; cursor: pointer;
-            font-weight: bold; font-size: 12px; z-index: 10;
+            padding: 10px 22px; border-radius: 50px; cursor: pointer;
+            font-weight: 800; font-size: 13px; z-index: 100;
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
         }
-        
-        /* تصميم إطار اللوقو السلفر */
-        .logo-wrapper {
-            width: 140px; height: 140px;
-            margin: 0 auto 25px;
-            background: linear-gradient(145deg, #e6e7e8, #999ea2);
-            padding: 4px; border-radius: 35px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 15px rgba(255,255,255,0.5);
+
+        /* تأثير التلاشي السلفر خلف اللوقو */
+        .logo-section {
+            position: relative; width: 180px; height: 180px; margin: 0 auto 35px;
+        }
+        .silver-aura {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 150px; height: 150px;
+            background: radial-gradient(circle, var(--silver-glow) 0%, transparent 70%);
+            filter: blur(35px); border-radius: 50%; z-index: 1;
+            animation: pulse 3s infinite ease-in-out;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.15); } }
+
+        .logo-frame {
+            position: relative; z-index: 2; width: 150px; height: 150px;
+            background: linear-gradient(145deg, #ffffff, #8e8e8e);
+            padding: 5px; border-radius: 40px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
             display: flex; align-items: center; justify-content: center;
         }
-        .game-logo {
-            width: 100%; height: 100%;
-            border-radius: 31px;
-            object-fit: cover;
-        }
+        .main-logo { width: 100%; height: 100%; border-radius: 35px; object-fit: cover; }
 
-        h1 { font-size: 2.4rem; margin: 0; background: linear-gradient(to bottom, #fff, #a1a1a1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .badge { background: rgba(0, 210, 255, 0.1); color: var(--primary); padding: 6px 18px; border-radius: 50px; font-size: 13px; border: 1px solid var(--primary); margin: 15px 0; display: inline-block; }
-        
-        .section-title { text-align: right; font-size: 18px; margin: 30px 0 15px; color: #fff; border-right: 4px solid var(--primary); padding-right: 12px; font-weight: bold; }
-        .en .section-title { text-align: left; border-right: none; border-left: 4px solid var(--primary); padding-left: 12px; }
+        h1 { font-size: 2.8rem; margin: 0; font-weight: 800; background: linear-gradient(to bottom, #fff 40%, #a1a1a1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .dev-badge { background: linear-gradient(90deg, rgba(0,210,255,0.2), rgba(58,123,213,0.2)); color: var(--primary); padding: 8px 24px; border-radius: 50px; font-size: 14px; border: 1px solid var(--primary); margin: 20px 0; display: inline-block; font-weight: bold; letter-spacing: 1px; }
 
-        .btn-list { display: flex; flex-direction: column; gap: 14px; }
-        .btn {
-            display: flex; align-items: center; padding: 20px 25px; border-radius: 20px;
-            text-decoration: none; color: #fff; background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border); font-size: 16px;
+        .expert-text { color: #94a3b8; line-height: 1.8; margin-bottom: 40px; font-size: 15px; }
+
+        .section-label { text-align: right; font-size: 19px; margin-bottom: 20px; color: #fff; border-right: 5px solid var(--primary); padding-right: 15px; font-weight: 700; }
+        .en .section-label { text-align: left; border-right: none; border-left: 5px solid var(--primary); padding-left: 15px; }
+
+        .grid-links { display: grid; gap: 15px; }
+        .nav-btn {
+            display: flex; align-items: center; padding: 22px 28px; border-radius: 22px;
+            text-decoration: none; color: #fff; background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border); font-size: 17px; font-weight: 600;
         }
-        .btn:hover { background: rgba(255,255,255,0.08); border-color: #fff; transform: translateY(-4px); }
-        .btn i { font-size: 22px; margin-left: 15px; width: 30px; text-align: center; }
-        .en .btn i { margin-left: 0; margin-right: 15px; }
-        
-        .fa-x-twitter { color: #fff; font-size: 24px !important; }
+        .nav-btn:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+        .nav-btn i { font-size: 24px; margin-left: 20px; width: 35px; text-align: center; }
+        .en .nav-btn i { margin-left: 0; margin-right: 20px; }
+
+        /* الأيقونات */
+        .fa-x-twitter { color: #ffffff; }
         .fa-whatsapp { color: #25D366; }
-        .fa-envelope { color: #ea4335; }
+        .fa-envelope { color: #ff4b2b; }
 
-        .security-note {
-            background: rgba(0, 210, 255, 0.05); border: 1px solid rgba(0, 210, 255, 0.1);
-            border-radius: 20px; padding: 20px; margin-top: 30px; text-align: right;
+        .pro-security {
+            background: linear-gradient(135deg, rgba(0,210,255,0.05) 0%, rgba(0,0,0,0) 100%);
+            border: 1px solid rgba(0,210,255,0.2); border-radius: 25px; padding: 25px; margin-top: 40px; text-align: right;
         }
-        .en .security-note { text-align: left; }
-        .security-note b { color: var(--primary); display: block; margin-bottom: 5px; font-size: 16px; }
+        .en .pro-security { text-align: left; }
+        .pro-security h4 { margin: 0 0 10px; color: var(--primary); display: flex; align-items: center; gap: 10px; font-size: 18px; }
 
-        .ar-text { display: block; } .en-text { display: none; }
-        .en .ar-text { display: none; } .en .en-text { display: block; }
+        .ar-content { display: block; } .en-content { display: none; }
+        .en .ar-content { display: none; } .en .en-content { display: block; }
     </style>
 </head>
 <body>
 
-    <div class="container" id="mainContainer">
-        <button class="lang-switch" onclick="toggleLang()">English</button>
+    <div class="container" id="appFrame">
+        <button class="lang-switch" onclick="switchLang()">English</button>
 
-        <div class="header">
-            <div class="logo-wrapper">
-                <img src="logo.jpg" alt="Block Nova" class="game-logo" onerror="this.src='https://via.placeholder.com/150/999ea2/ffffff?text=B+Nova'">
+        <header>
+            <div class="logo-section">
+                <div class="silver-aura"></div>
+                <div class="logo-frame">
+                    <img src="https://image2url.com/r2/default/images/1775012683058-e66122bd-158c-4ec8-a35b-42f4a54b37d0.png" alt="Block Nova" class="main-logo">
+                </div>
             </div>
             
-            <h1 class="ar-text">بلوك نوفا</h1>
-            <h1 class="en-text">Block Nova</h1>
-            <div class="badge ar-text">مطور معتمد من آبل</div>
-            <div class="badge en-text">Apple Verified Developer</div>
-            <p style="color:#94a3b8; margin: 5px 0;">Developer: <b>Bader Al-Shammari</b></p>
+            <h1 class="ar-content">بلوك نوفا</h1>
+            <h1 class="en-content">Block Nova</h1>
+            
+            <div class="dev-badge ar-content">مطور برمجيات معتمد لدى Apple</div>
+            <div class="dev-badge en-content">Apple Certified Software Engineer</div>
+            
+            <p class="expert-text ar-content">
+                بإشراف المطور <b>بدر محمد الشمري</b>. نحن نؤمن بأن البرمجة فن، والخصوصية خط أحمر. تم بناء هذا المشروع بأحدث تقنيات التطوير لضمان الكفاءة والأمان المطلق.
+            </p>
+            <p class="expert-text en-content">
+                Lead Developer: <b>Bader Al-Shammari</b>. We believe coding is an art and privacy is a priority. Built with cutting-edge tech to ensure peak performance and absolute security.
+            </p>
+        </header>
+
+        <div class="section-label">
+            <span class="ar-content">التواصل التقني المباشر</span>
+            <span class="en-content">Technical Support Hub</span>
         </div>
 
-        <div class="section-title">
-            <span class="ar-text">الدعم والاتصال</span>
-            <span class="en-text">Support & Contact</span>
-        </div>
-
-        <div class="btn-list">
-            <a href="https://wa.me/96551131102" class="btn">
+        <div class="grid-links">
+            <a href="https://wa.me/96551131102" class="nav-btn">
                 <i class="fab fa-whatsapp"></i>
-                <span class="ar-text">واتساب الدعم المباشر</span>
-                <span class="en-text">Direct WhatsApp Support</span>
+                <span class="ar-content">دعم المطور عبر واتساب</span>
+                <span class="en-content">Developer WhatsApp Support</span>
             </a>
-            <a href="https://x.com/iB4DR_I" class="btn">
+            <a href="https://x.com/iB4DR_I" class="nav-btn">
                 <i class="fab fa-x-twitter"></i>
-                <span class="ar-text">متابعة المطور على X</span>
-                <span class="en-text">Follow Developer on X</span>
+                <span class="ar-content">الحساب الرسمي على X</span>
+                <span class="en-text en-content">Official X Profile</span>
             </a>
-            <a href="mailto:IB4DRI@GMAIL.COM" class="btn">
+            <a href="mailto:IB4DRI@GMAIL.COM" class="nav-btn">
                 <i class="fas fa-envelope"></i>
-                <span class="ar-text">المراسلة الرسمية</span>
-                <span class="en-text">Official Email Support</span>
+                <span class="ar-content">المراسلات المهنية الرسمية</span>
+                <span class="en-content">Official Professional Email</span>
             </a>
         </div>
 
-        <div class="security-note">
-            <span class="ar-text">
-                <b><i class="fas fa-user-shield"></i> الأمان والخصوصية</b>
-                نحن نلتزم بأعلى معايير التشفير وحماية البيانات. Block Nova لا تقوم بجمع معلوماتك الشخصية، وتوفر بيئة لعب مستقرة وآمنة تماماً لجميع المستخدمين.
-            </span>
-            <span class="en-text">
-                <b><i class="fas fa-user-shield"></i> Security & Privacy</b>
-                We adhere to the highest standards of encryption. Block Nova does not collect personal info, providing a stable and secure environment for all users.
-            </span>
+        <div class="pro-security">
+            <div class="ar-content">
+                <h4><i class="fas fa-microchip"></i> معايير الأمان والخصوصية</h4>
+                نستخدم خوارزميات تشفير متقدمة لضمان حماية بيانات المستخدمين. تطبيقنا يلتزم ببروتوكولات الخصوصية الصارمة، ولا يتم الوصول لأي بيانات دون موافقة تقنية صريحة.
+            </div>
+            <div class="en-content">
+                <h4><i class="fas fa-microchip"></i> Security & Engineering Standards</h4>
+                We implement advanced encryption algorithms to safeguard user data. Our app strictly adheres to privacy protocols, ensuring no data access without explicit technical consent.
+            </div>
         </div>
 
-        <footer style="margin-top:40px; font-size:11px; color:#475569; letter-spacing: 1px;">
-            &copy; 2026 BADER AL-SHAMMARI. PREMIUM SOLUTIONS.
+        <footer style="margin-top:45px; font-size:11px; color:#475569; letter-spacing: 2px; text-transform: uppercase;">
+            &copy; 2026 BADER AL-SHAMMARI | EXPERT APP ARCHITECTURE
         </footer>
     </div>
 
     <script>
-        function toggleLang() {
-            const container = document.getElementById('mainContainer');
+        function switchLang() {
+            const frame = document.getElementById('appFrame');
             const btn = document.querySelector('.lang-switch');
-            if (container.classList.contains('en')) {
-                container.classList.remove('en');
-                container.dir = "rtl";
-                btn.innerText = "English";
+            if (frame.classList.contains('en')) {
+                frame.classList.remove('en'); frame.dir = "rtl"; btn.innerText = "English";
             } else {
-                container.classList.add('en');
-                container.dir = "ltr";
-                btn.innerText = "عربي";
+                frame.classList.add('en'); frame.dir = "ltr"; btn.innerText = "عربي";
             }
         }
     </script>
